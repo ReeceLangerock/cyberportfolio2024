@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem 2rem 2rem;
+  padding: 2rem 3rem 3rem 3rem;
   font-family: var(--font-mono);
   min-height: 100vh;
 }
@@ -11,22 +11,23 @@
 .topBar {
   width: 100%;
   height: 2px;
-  background: var(--uiBorderRed);
   position: relative;
-  z-index: 1;
-  box-shadow: 0 1px 14px 1pxcolor-mix(in srgb, var(--uiBorderRed) 80%, transparent);
+  display: flex;
+  align-items: center;
+
+  & div {
+    flex: 1;
+    background: var(--uiBorderRed);
+    width: 100%;
+    height: 2px;
+    box-shadow: 0 1px 14px 1px color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
+  }
 }
 
 .activePage {
   color: var(--colorLightBlue);
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--backgroundDark);
   text-transform: uppercase;
-  z-index: 10;
-  padding: 0 12px;
+  padding: 0 var(--spacing-lg)
 }
 
 .wrapper {
@@ -46,4 +47,9 @@
 
 .topNav {
   color: var(--colorLightBlue);
+}
+
+.contentContainer {
+  margin: var(--spacing-xl) 0;
+  flex: 1;
 }

@@ -6,11 +6,32 @@ import styles from "./page.module.css";
 import { Clock } from "@/components/Clock";
 import { CenterNav } from "@/components/UI/CenterNav";
 import { TopNav } from "@/components/UI/TopNav";
+import { LINKS } from "@/types/enums";
+import { Portfolio } from "@/components/Content/Portfolio";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [activePage, setActivePage] = useState("About");
+
+  const renderContent = () => {
+    console.log(activePage);
+
+    switch (activePage) {
+      case LINKS.HOME:
+        return <CenterNav />;
+      case LINKS.ABOUT:
+        return <div>About</div>;
+      case LINKS.PORTFOLIO:
+        return <Portfolio />;
+      case "CONTACT":
+        return <div>Contact</div>;
+      case "SETTINGS":
+        return <div>Settings</div>;
+      default:
+        return <CenterNav />;
+    }
+  };
 
   return (
     <>
@@ -21,13 +42,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <TopNav />
+        {activePage !== "HOME" && <TopNav handlePageChange={setActivePage} />}
         <div className={styles.wrapper}>
           <div className={styles.topBar}>
-            <span className={styles.activePage}>{activePage}</span>
+            <div></div>
+            {activePage !== "HOME" && (
+              <span className={styles.activePage}>{activePage}</span>
+            )}
+            <div></div>
           </div>
 
-          <CenterNav />
+          <div className={styles.contentContainer}>{renderContent()}</div>
 
           <div className={styles.bottomContainer}>
             <Clock />

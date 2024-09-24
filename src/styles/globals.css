@@ -1,35 +1,48 @@
 :root {
+  --red: hsl(0deg 52.5% 31.37%);
   /* ui */
   --uiBorderRed: lch(60 72.91 32.66);
+  --uiBorderLightRed: #652422;
+  --uiBorderBlue: hsl(182.95deg 49.59% 51.76%);
+  --uiBorderLightBlue: hsl(186.18deg 38.64% 34.51%);
+  --uiBorderYellow: var(--colorYellow1);
+
   --backgroundRed: #4d191d;
   --backgroundDark: #06090e;
-  --uiBorderLightRed: #652422;
+  --backgroundItem: #0f0d15;
 
   /* buttons */
-  --buttonBorder: #672423;
-  --buttonBorderActive: #c8403c;
-  --buttonBackgroundActive: var(--backgroundRed);
+  --buttonBorder: hsl(350.23deg 50.59% 16.67%);
+  --buttonBackground: hsl(292.5deg 23.53% 6.67%);
+  --buttonBackgroundHover: hsl(352deg 50.56% 17.45%);
+  --buttonBorderHover: hsl(0deg 51.96% 40%);
+  --buttonBackgroundActive: hsl(0deg 51.55% 31.57%);
+  --buttonBorderActive: hsl(3.23deg 84.77% 61.37%);
+
+  /*  secondary button */
+  --buttonSecondaryBorder: var(--uiBorderLightBlue);
+  --buttonSecondaryBackground: hsl(220deg 36% 4.9%);
+  --buttonSecondaryBackgroundHover: hsl(188.28deg 49.15% 11.57%);
+  --buttonSecondaryBorderHover: hsl(183.53deg 65.38% 59.22%);
 
   /* fonts */
-  --colorLightBlue: #59e1ec;
+  --colorLightBlue: hsl(180.56deg 93.01% 55.1%);
   --colorLightRed: #e64845;
+  --colorRed: hsl(3.69deg 51.59% 50.59%);
+  --colorYellow1: hsl(42.91deg 72.27% 53.33%);
+  --colorYellow2: hsl(45.64deg 90.38% 59.22%);
 
-  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono",
-    "Ubuntu Monospace", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  /* spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
 }
 
 * {
@@ -46,7 +59,20 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: var(--backgroundDark);
+  /* background: radial-gradient(
+    circle,
+    var(--backgroundRed) 0%,
+    var(--backgroundDark) 100%
+  ); */
+
+  /* radial gradient starting at top of page */
+
+  background: radial-gradient(
+    circle at 20% -100px,
+    /* Offset the center by 100px from both top and left */ var(--backgroundRed)
+      10%,
+    var(--backgroundDark) 70%
+  );
 }
 
 a {

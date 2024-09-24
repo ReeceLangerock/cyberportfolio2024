@@ -1,12 +1,21 @@
 import styles from "./CenterNav.module.css";
+import { LINKS } from "@/types/enums";
 
-export const TopNav: React.FC = () => {
+type Props ={
+  handlePageChange: (page: LINKS) => void;
+}
+
+export const TopNav: React.FC<Props> = ({
+  handlePageChange, 
+}) => {
+
+
   return (
     <div className={styles.linkContainer}>
-      <button className={styles.link}>About</button>
-      <button className={styles.link}>Portfolio</button>
-      <button className={styles.link}>Contact</button>
-      <button className={styles.link}>Settings</button>
+      <button className={styles.link} onClick={()=> handlePageChange(LINKS.ABOUT)}>About</button>
+      <button className={styles.link} onClick={()=> handlePageChange(LINKS.PORTFOLIO)}>Portfolio</button>
+      <button className={styles.link} onClick={()=> handlePageChange(LINKS.CONTACT)}>Contact</button>
+      <button className={styles.link} onClick={()=> handlePageChange(LINKS.SETTINGS)}>Settings</button>
     </div>
   );
 };
