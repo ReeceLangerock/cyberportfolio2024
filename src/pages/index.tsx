@@ -1,33 +1,17 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Content, Inter } from "next/font/google";
 import { useState, useEffect } from "react";
 import styles from "./page.module.css";
+import { Clock } from "@/components/Clock";
+import { CenterNav } from "@/components/UI/CenterNav";
+import { TopNav } from "@/components/UI/TopNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const getTime = () => {
-    const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    const ampm = hours >= 12 ? "PM" : "AM";
-    const formattedHours = hours % 12 || 12;
-    const formattedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-    return `${formattedHours}:${formattedMinutes} ${ampm}`;
-  };
+  const [activePage, setActivePage] = useState("About");
 
-  const [time, setTime] = useState(getTime());
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      console.log("updating time");
-      setTime(getTime());
-    }, 45000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(intervalId);
-  }, []); // Empty dependency array ensures this runs only once
   return (
     <>
       <Head>
@@ -37,18 +21,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <TopNav />
         <div className={styles.wrapper}>
-          <div>top</div>
-
-          <div className={styles.buttonContainer}>
-            <button className={styles.button}>About</button>
-            <button className={styles.button}>Portfolio</button>
-            <button className={styles.button}>Contact</button>
-            <button className={styles.button}>Settings</button>
+          <div className={styles.topBar}>
+            <span className={styles.activePage}>{activePage}</span>
           </div>
 
+          <CenterNav />
+
           <div className={styles.bottomContainer}>
-            <div className={styles.timeContainer}>{time}</div>
+            <Clock />
             <div>Other</div>
           </div>
         </div>

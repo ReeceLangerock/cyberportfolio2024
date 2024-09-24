@@ -1,0 +1,7 @@
+.timeContainer {
+  padding: 0.5rem 1rem;
+  background-color: var(--backgroundRed);
+  border: 1px solid var(--uiBorderLightRed);
+  border-radius: 1px;
+  color: var(--colorLightBlue);
+}

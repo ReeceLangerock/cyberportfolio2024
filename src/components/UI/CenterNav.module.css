@@ -1,0 +1,48 @@
+.button {
+  border: 1px solid var(--buttonBorder);
+  border-left: 6px solid var(--buttonBorder);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  width: 160px;
+  height: 40px;
+  color: var(--colorLightBlue);
+  text-align: left;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: var(--buttonBorderActive);
+    background: var(--buttonBackgroundActive);
+    box-shadow: 2px 2px 8px 1px color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.link {
+  font-size: 16px;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  width: 120px;
+  height: 40px;
+  color: var(--colorLightRed);
+  text-align: left;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--colorLightBlue);
+  }
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+}
