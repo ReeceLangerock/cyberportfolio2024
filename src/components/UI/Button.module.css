@@ -1,0 +1,27 @@
+.button {
+  border: 1px solid var(--buttonBorder);
+  border-left: 6px solid var(--buttonBorder);
+  background: rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-md) var(--spacing-lg);
+  color: var(--colorBlueLight);
+  text-align: left;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: var(--buttonBorderActive);
+    background: var(--buttonBackgroundActive);
+    box-shadow: 1px 1px 7px 1px
+      color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
+  }
+  max-width: 160px;
+  flex: 1;
+
+  @media (max-width: 640px) {
+    width: 100%;
+  }
+
+  @media (max-width: 425px) {
+    flex: 0;
+    max-width: initial;
+  }
+}
