@@ -32,9 +32,20 @@
   }
 }
 
+.bottomBar {
+  margin-top: var(--spacing-lg);
+  & div {
+    background: var(--uiBorderRedDark);
+    box-shadow: 0 1px 10px 1px
+      color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
+  }
+  & span {
+    flex: 2;
+  }
+}
+
 .topFiller {
   height: 56px;
-
   .title {
     text-transform: uppercase;
     padding: 0 var(--spacing-lg);

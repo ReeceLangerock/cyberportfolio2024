@@ -61,8 +61,8 @@ export default function Home() {
               className={styles.title}
             >
               <h1 className={cyber.className}>
-                Langerock
-                <span className={play.className}>{year}</span>
+                RL
+                {/* <span className={play.className}>{year}</span> */}
               </h1>
             </motion.div>
           </AnimatePresence>
@@ -101,6 +101,12 @@ export default function Home() {
                 handleClick={() => setActivePage(LINKS.HOME)}
               />
             )}
+          </div>
+          <div className={`${styles.topBar} ${styles.bottomBar}`}>
+            <div></div>
+            <span className={styles.activePage}></span>
+
+            <div></div>
           </div>
         </div>
       </main>

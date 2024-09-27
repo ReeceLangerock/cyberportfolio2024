@@ -10,34 +10,38 @@ export const Portfolio: React.FC = () => {
   return (
     <div className={styles.grid}>
       <LayoutGroup key="portfolioItems">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.75 }}
-          animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
-          exit={{ opacity: 0, scale: 0.75 }}
-          className={styles.portfolioListContainer}
-        >
-          <h2>Projects</h2>
-          <ul className={styles.portfolioList}>
-            {portfolioItems.map((item, index) => (
-              <motion.li
-                exit={{ opacity: 0, scale: 0.75 }}
-                whileHover={{ scale: 1.025, x: -5 }}
-                whileTap={{ scale: 0.975 }}
-                key={index}
-                className={`${styles.portfolioItem} ${
-                  index === activeItem ? styles.active : ""
-                }`}
-                onClick={() => setActiveItem(index)}
-              >
-                <div className={styles.border}></div>
-                <div className={styles.portfolioItemContent}>
-                  <div className={styles.itemTitle}>{item.title}</div>
-                  <div className={styles.itemTech}>{item.tech.join(", ")}</div>
-                </div>
-              </motion.li>
-            ))}
-          </ul>
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.75 }}
+            animate={{ opacity: 1, scale: 1, transition: { duration: 0.5 } }}
+            exit={{ opacity: 0, scale: 0.75 }}
+            className={styles.portfolioListContainer}
+          >
+            <h2>Projects</h2>
+            <ul className={styles.portfolioList}>
+              {portfolioItems.map((item, index) => (
+                <motion.li
+                  exit={{ opacity: 0, scale: 0.75 }}
+                  whileHover={{ scale: 1.025, x: -5 }}
+                  whileTap={{ scale: 0.975 }}
+                  key={index}
+                  className={`${styles.portfolioItem} ${
+                    index === activeItem ? styles.active : ""
+                  }`}
+                  onClick={() => setActiveItem(index)}
+                >
+                  <div className={styles.border}></div>
+                  <div className={styles.portfolioItemContent}>
+                    <div className={styles.itemTitle}>{item.title}</div>
+                    <div className={styles.itemTech}>
+                      {item.tech.join(", ")}
+                    </div>
+                  </div>
+                </motion.li>
+              ))}
+            </ul>
+          </motion.div>
+        </AnimatePresence>
       </LayoutGroup>
       <AnimatePresence>
         <motion.div
