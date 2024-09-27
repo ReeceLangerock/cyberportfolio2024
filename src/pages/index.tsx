@@ -61,8 +61,8 @@ export default function Home() {
               className={styles.title}
             >
               <h1 className={cyber.className}>
-                RL
-                {/* <span className={play.className}>{year}</span> */}
+                Langerock
+                <span className={play.className}>{year}</span>
               </h1>
             </motion.div>
           </AnimatePresence>
