@@ -23,10 +23,10 @@ export const PortfolioImages: React.FC<Props> = ({
           transition={{ delay: 0.4 }}
           className={styles.imageContainer}
         >
-          {(images || []).map((image, index) => {
+          {images.map((image, index) => {
             const altText = imageAltTexts ? imageAltTexts[index] : "";
             return (
-              <div className={styles.imageWrapper}>
+              <div className={styles.imageWrapper} key={image}>
                 <Image
                   sizes="100vw"
                   style={{

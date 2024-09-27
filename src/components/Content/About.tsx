@@ -2,9 +2,10 @@ import { useState } from "react";
 import styles from "./About.module.css";
 import { ABOUT } from "./AboutContent";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 export const About = () => {
-  const [activeItem, setActiveItem] = useState<string | null>("front");
+  const [activeItem, setActiveItem] = useState<string>("front");
 
   return (
     <div className={styles.aboutContainer}>
@@ -28,18 +29,19 @@ export const About = () => {
 
             <h3>Software Engineer</h3>
             <p>
-              Hello, I'm Reece. I'm a Senior Software Engineer working remotely
-              from the Chicago suburbs. With a passion for continuous learning,
-              I thrive on tackling new challenges and exploring emerging
-              technologies. Over the years, I've gained a wealth of experience
-              across full-stack development, from building scalable systems to
-              crafting responsive, user-friendly interfaces. Whether I'm
-              integrating AI-driven features, developing greenfield solutions,
-              or mentoring teams, I’m driven by the excitement of solving
-              complex problems and making a meaningful impact.
+              Hello, I&apos;m Reece. I&apos;m a Senior Software Engineer working
+              remotely from the Chicago suburbs. With a passion for continuous
+              learning, I thrive on tackling new challenges and exploring
+              emerging technologies. Over the years, I&apos;ve gained a wealth
+              of experience across full-stack development, from building
+              scalable systems to crafting responsive, user-friendly interfaces.
+              Whether I&apos;m integrating AI-driven features, developing
+              greenfield solutions, or mentoring teams, I&apos;m driven by the
+              excitement of solving complex problems and making a meaningful
+              impact.
             </p>
             <p>
-              Feel free to check out my portfolio and the skills I’ve been
+              Feel free to check out my portfolio and the skills I&apos;ve been
               honing, but rest assured, my list of things to explore never stops
               growing!
             </p>
@@ -49,7 +51,7 @@ export const About = () => {
             <div className={styles.biometric}>
               <h2>Biometric Data</h2>
 
-              <img src={`/images/barcode.png`} width="300px" />
+              <Image src={`/images/barcode.png`} alt="barcode" width={300} />
             </div>
             {/* 
           barcode svg */}
@@ -68,8 +70,10 @@ export const About = () => {
           <div className={styles.techStack}>
             <h3>Front End</h3>
             <div className={styles.techContainer}>
-              {ABOUT[activeItem].map((item, index) => (
-                <div className={styles.button}>{item}</div>
+              {ABOUT.front.map((item, index) => (
+                <div key={item} className={styles.button}>
+                  {item}
+                </div>
               ))}
             </div>
           </div>
@@ -77,7 +81,9 @@ export const About = () => {
             <h3>Back End</h3>
             <div className={styles.techContainer}>
               {ABOUT.back.map((item, index) => (
-                <div className={styles.button}>{item}</div>
+                <div key={item} className={styles.button}>
+                  {item}
+                </div>
               ))}
             </div>
           </div>
@@ -85,7 +91,9 @@ export const About = () => {
             <h3>Misc</h3>
             <div className={styles.techContainer}>
               {ABOUT.other.map((item, index) => (
-                <div className={styles.button}>{item}</div>
+                <div key={item} className={styles.button}>
+                  {item}
+                </div>
               ))}
             </div>
           </div>
@@ -93,7 +101,9 @@ export const About = () => {
             <h3>Personal Interests</h3>
             <div className={styles.techContainer}>
               {ABOUT.personal.map((item, index) => (
-                <div className={styles.button}>{item}</div>
+                <div key={item} className={styles.button}>
+                  {item}
+                </div>
               ))}
             </div>
           </div>

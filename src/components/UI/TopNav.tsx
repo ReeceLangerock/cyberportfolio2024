@@ -2,7 +2,7 @@ import styles from "./Nav.module.css";
 import { LINKS } from "@/types/enums";
 
 type Props = {
-  handlePageChange: (page: LINKS) => void;
+  handlePageChange: (page: string) => void;
 };
 
 export const TopNav: React.FC<Props> = ({ handlePageChange }) => {

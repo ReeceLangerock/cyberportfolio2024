@@ -18,13 +18,13 @@ export const portfolioItems = [
   },
   {
     id: 7,
-    title: "Homeroom",
+    title: "Choice Time",
     synopsis: "",
     tech: ["Svelte", "SvelteKit", "Web Voice API"],
     note: "This project was an experiment in Svelte, never fully completed",
     private: false,
     date: "April 2022",
-    siteLink: "https://m538.herokuapp.com/revo",
+    siteLink: "https://choicetime.netlify.app/",
     repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
     images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
     imageAltTexts: [
