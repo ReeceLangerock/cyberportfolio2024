@@ -6,6 +6,7 @@ import { AnimatePresence, LayoutGroup, motion } from "framer-motion";
 
 export const Portfolio: React.FC = () => {
   const [activeItem, setActiveItem] = useState(0);
+  console.log(activeItem, portfolioItems[activeItem]);
 
   return (
     <div className={styles.grid}>
@@ -74,7 +75,10 @@ export const Portfolio: React.FC = () => {
           <p>Coded in: {portfolioItems[activeItem].date}</p>
         </motion.div>
       </AnimatePresence>
-      <PortfolioImages activeProject={portfolioItems[activeItem]} />
+      <PortfolioImages
+        images={portfolioItems[activeItem].images}
+        imageAltTexts={portfolioItems[activeItem].imageAltTexts}
+      />
     </div>
   );
 };

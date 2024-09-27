@@ -3,15 +3,11 @@ import styles from "./PortfolioImages.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 
 type Props = {
-  activeProject: {
-    images?: string[];
-    imageAltTexts?: string[];
-  };
+  images?: string[];
+  imageAltTexts?: string[];
 };
 
-export const PortfolioImages: React.FC<Props> = ({
-  activeProject: { imageAltTexts, images },
-}) => (
+export const PortfolioImages: React.FC<Props> = ({ images, imageAltTexts }) => (
   <>
     {images && (
       <AnimatePresence>
@@ -26,7 +22,15 @@ export const PortfolioImages: React.FC<Props> = ({
           {images.map((image, index) => {
             const altText = imageAltTexts ? imageAltTexts[index] : "";
             return (
-              <div className={styles.imageWrapper} key={image}>
+              <motion.div
+                whileHover={{
+                  scale: 1.5,
+                  x: -50,
+                  zIndex: 10,
+                }}
+                key={image}
+                className={styles.imageWrapper}
+              >
                 <Image
                   sizes="100vw"
                   style={{
@@ -36,12 +40,12 @@ export const PortfolioImages: React.FC<Props> = ({
                   height={250}
                   width={350}
                   key={index}
-                  src={`/images/${image}` || ""}
+                  src={`/images/${image}.png`}
                   alt={altText}
                   className={styles.image}
                 />
                 <div className={styles.altText}>{altText}</div>
-              </div>
+              </motion.div>
             );
           })}
         </motion.div>

@@ -2,8 +2,8 @@ export const portfolioItems = [
   {
     id: 0,
     title: "Automated Insights",
-    synopsis: "Automated Insights is",
-    tech: ["Next.js", "Supabase", "OpenAI API"],
+    synopsis: `Automated insights is a site that provides custom analysis and breakdowns for ESPN fantasy football leagues. This tool offers league-wide snapshots, highlighting top performers and poor roster decisions. For each matchup, it generates in-depth analysis of key roster moves, "what-if" scenarios, game notes, and visualized scoring breakdowns. With an OpenAI integration, the system also generates summaries for each matchup and the overall league week, giving users a clear and concise overview of performance. This comprehensive analysis is delivered consistently each week, helping users stay on top of their league.`,
+    tech: ["Next.js", "Supabase", "TypeScript", "OpenAI API"],
     private: true,
     notes: "This project is in active development",
     date: "August 2024",
@@ -16,15 +16,35 @@ export const portfolioItems = [
       "Rushing Statistics View",
     ],
   },
+
   {
     id: 7,
     title: "Choice Time",
-    synopsis: "",
+    synopsis:
+      "I built Choice Time as an experiment in Svelte, SvelteKit and thw Web Voice API. It was built to entertain my children, which was why Voice API was used as they couldn't read at the time I built it.",
     tech: ["Svelte", "SvelteKit", "Web Voice API"],
-    note: "This project was an experiment in Svelte, never fully completed",
+    notes:
+      "As this project was an experiment, it was never fully completed and is added to whenever my kids ask for new features.",
     private: false,
     date: "April 2022",
     siteLink: "https://choicetime.netlify.app/",
+    repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
+    images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
+    imageAltTexts: [
+      "Dashboard",
+      "Fantasy Page View",
+      "Rushing Statistics View",
+    ],
+  },
+  {
+    id: 8,
+    title: "Portfolio 2019",
+    synopsis:
+      "This is the previous iteration of my personal portfolio site, built in Gatsby. It was designed to replicate the in-game terminal UI from Alien: Isolation. I replaced it both because it was outdated, and because the Gatsby version was so out of date it was impossible to update without a huge amount of effort.",
+    tech: ["React", "Gatsby", "Context", "GraphQQ"],
+    private: false,
+    date: "March 2019",
+    siteLink: "https://langerock.netlify.app/",
     repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
     images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
     imageAltTexts: [
@@ -88,15 +108,11 @@ export const portfolioItems = [
     fcc: "https://codepen.io/freeCodeCamp/full/apLXEJ/",
     siteLink: "http://dungeoneer.surge.sh/",
     repoLink: "https://github.com/ReeceLangerock/dungeoneer",
-    images: [
-      "dungeoneer.png",
-      "dungeoneer_hidden.png",
-      "dungeoneer_visible.png",
-    ],
+    images: ["dungeoneer", "dungeoneer_hidden", "dungeoneer_visible"],
     imageAltTexts: [
       "Responsive Landing View",
-      "User Stats Page",
-      "Head To Head View",
+      "Fog of War View",
+      "Dungon Overview",
     ],
   },
   {

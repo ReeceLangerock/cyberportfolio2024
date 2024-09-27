@@ -57,6 +57,7 @@ export const About = () => {
                 style={{
                   width: "100%",
                   height: "auto",
+                  maxWidth: "260px",
                 }}
                 height={80}
                 width={200}

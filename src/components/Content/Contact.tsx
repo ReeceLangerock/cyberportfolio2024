@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Contact.module.css";
-import { Email, GitHub, LinkedIn } from "@/icons/brandIcons";
+import { Email, GitHub, GitLab, LinkedIn } from "@/icons/brandIcons";
 import { AnimatePresence, motion, spring } from "framer-motion";
 
 export const Contact = () => {
@@ -43,10 +43,14 @@ export const Contact = () => {
             <div>GitHub</div>
             <GitHub />
           </a>
-          <div className={styles.contactItem}>
+          <a
+            href="https://gitlab.com/ReeceLangerock"
+            target="_blank"
+            className={styles.contactItem}
+          >
             <div>GitLab</div>
-            <LinkedIn />
-          </div>
+            <GitLab />
+          </a>
         </div>
       </motion.div>
     </AnimatePresence>

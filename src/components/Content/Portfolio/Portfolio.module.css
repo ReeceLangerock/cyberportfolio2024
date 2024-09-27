@@ -4,6 +4,7 @@
   grid-template-columns: 2fr 3fr 1fr;
   gap: var(--spacing-xxl);
   flex: 1;
+  width: 100%;
   margin-top: var(--spacing-xl);
 
   @media (max-width: 1024px) {
@@ -100,6 +101,7 @@
 .contentContainer {
   color: var(--colorRed);
   border-radius: 2px;
+  flex: 10;
 
   & h2 {
     color: var(--colorRedLight);

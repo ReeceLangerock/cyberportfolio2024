@@ -70,11 +70,11 @@
 
   @media (max-width: 1024px) {
     height: auto;
-    min-height: 103px;
+    min-height: 111px;
     .title {
       text-align: center;
       left: initial;
-      margin: 0 auto var(--spacing-md) auto;
+      margin: 0 auto var(--spacing-lg) auto;
       position: relative;
       padding: 0;
     }
