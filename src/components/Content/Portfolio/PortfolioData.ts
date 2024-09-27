@@ -7,14 +7,9 @@ export const portfolioItems = [
     private: true,
     notes: "This project is in active development",
     date: "August 2024",
-    siteLink: "https://m538.herokuapp.com/revo",
-    repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
-    images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
-    imageAltTexts: [
-      "Dashboard",
-      "Fantasy Page View",
-      "Rushing Statistics View",
-    ],
+    siteLink: "https://automatedinsights.netlify.app/league/1/2024/3",
+    images: ["AI1", "AI2"],
+    imageAltTexts: ["1:1 Matchup", "League Insights"],
   },
 
   {
@@ -29,7 +24,7 @@ export const portfolioItems = [
     date: "April 2022",
     siteLink: "https://choicetime.netlify.app/",
     repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
-    images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
+    images: ["ct_home", "ct_maze", "ct_guess"],
     imageAltTexts: [
       "Dashboard",
       "Fantasy Page View",
@@ -46,12 +41,8 @@ export const portfolioItems = [
     date: "March 2019",
     siteLink: "https://langerock.netlify.app/",
     repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
-    images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
-    imageAltTexts: [
-      "Dashboard",
-      "Fantasy Page View",
-      "Rushing Statistics View",
-    ],
+    images: ["port_about", "port_portfolio", "port_settings"],
+    imageAltTexts: ["About Page", "Portfolio Page", "Settings Page"],
   },
   {
     id: 1,
@@ -61,6 +52,7 @@ export const portfolioItems = [
     tech: ["React", "Redux", "Express.js", "MongoDB"],
     private: false,
     date: "August 2018",
+    notes: "Site is current down due to Heroku not being cool anymore",
     siteLink: "https://m538.herokuapp.com/revo",
     repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
     images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
@@ -81,11 +73,7 @@ export const portfolioItems = [
     siteLink:
       "https://play.google.com/store/apps/details?id=com.cfmscout&hl=en_US",
     images: ["main", "add", "prospect"],
-    imageAltTexts: [
-      "Landing View and add draftboard",
-      "Add Prospect View",
-      "Prospect View",
-    ],
+    imageAltTexts: ["Landing View", "Add Prospect View", "Prospect View"],
   },
   {
     id: 3,
