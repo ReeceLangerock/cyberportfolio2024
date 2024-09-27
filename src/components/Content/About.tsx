@@ -11,9 +11,10 @@ export const About = () => {
       <AnimatePresence>
         <motion.div
           key="about"
-          initial={{ opacity: 0, scale: 0.75 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.75 }}
+          animate={{
+            scale: [0.8, 0.9, 1],
+          }}
+          transition={{ type: "spring" }}
           className={styles.container}
         >
           <div className={styles.leftBorder}></div>
