@@ -1,7 +1,9 @@
 .timeContainer {
-  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
   background-color: var(--backgroundRed);
-  border: 1px solid var(--uiBorderLightRed);
-  border-radius: 1px;
-  color: var(--colorLightBlue);
+  border: 1px solid var(--uiBorderRedDark);
+  border-radius: var(--border-radius-xs);
+  color: var(--colorBlueLight);
 }
