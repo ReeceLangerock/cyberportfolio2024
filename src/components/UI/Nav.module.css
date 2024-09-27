@@ -1,0 +1,45 @@
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  flex: 1;
+  width: 100%; /* Makes the container stretch to its max width */
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+    max-width: 100%;
+    gap: var(--spacing-md);
+  }
+}
+
+.link {
+  font-size: var(--font-size-md);
+  border: none;
+  background: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: 120px;
+  color: var(--colorRedLight);
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    color: var(--colorBlueLight);
+  }
+
+  @media (max-width: 425px) {
+    width: auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+
+  @media (max-width: 425px) {
+    gap: var(--spacing-xs);
+  }
+}

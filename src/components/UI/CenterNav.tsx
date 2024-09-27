@@ -1,15 +1,35 @@
-import styles from "./CenterNav.module.css";
-import { motion } from "framer-motion";
+import styles from "./Nav.module.css";
+import { LINKS } from "@/types/enums";
+import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "./Button";
 
-export const CenterNav: React.FC = () => {
+type Props = {
+  handlePageChange: (page: string) => void;
+};
+
+export const CenterNav: React.FC<Props> = ({ handlePageChange }) => {
   return (
-    <div className={styles.buttonContainer}>
-      <motion.button whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.975 }} className={styles.button}>
-        About
-      </motion.button>
-      <button className={styles.button}>Portfolio</button>
-      <button className={styles.button}>Contact</button>
-      <button className={styles.button}>Settings</button>
-    </div>
+    <AnimatePresence>
+      <motion.div
+        key="centerNav"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        className={styles.buttonContainer}
+      >
+        <Button
+          text="ABOUT"
+          handleClick={() => handlePageChange(LINKS.ABOUT)}
+        />
+        <Button
+          text="PORTFOLIO"
+          handleClick={() => handlePageChange(LINKS.PORTFOLIO)}
+        />
+        <Button
+          text="CONTACT"
+          handleClick={() => handlePageChange(LINKS.CONTACT)}
+        />
+      </motion.div>
+    </AnimatePresence>
   );
 };
