@@ -107,7 +107,7 @@ export default function Home() {
             <span className={styles.activePage}></span>
 
             <div
-              style={{ display: activePage === "HOME" ? "none" : "block" }}
+              style={{ opacity: activePage === "HOME" ? "0" : "100%" }}
             ></div>
           </div>
         </div>
