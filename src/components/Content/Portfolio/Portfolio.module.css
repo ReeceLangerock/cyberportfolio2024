@@ -1,7 +1,23 @@
 .grid {
   display: grid;
+  align-content: space-between;
   grid-template-columns: 2fr 3fr 1fr;
   gap: var(--spacing-xxl);
+  flex: 1;
+  margin-top: var(--spacing-xl);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto; /* Auto height for rows */
+    grid-template-areas:
+      "col1 col2"
+      "full full"; /* Second row spans across the whole grid */
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .portfolioListContainer {
@@ -10,8 +26,7 @@
   gap: var(--spacing-md);
 
   & h2 {
-    color: var(--colorLightRed);
-    font-size: 18px;
+    color: var(--colorRedLight);
     border: 1px solid hsl(188.28deg 49.15% 11.57%);
     padding: var(--spacing-xs) var(--spacing-md);
     text-transform: uppercase;
@@ -28,7 +43,6 @@
   display: flex;
   background: var(--buttonBackground);
   height: 52px;
-  font-family: var(--font-mono);
   text-transform: uppercase;
   margin-bottom: var(--spacing-xs);
 
@@ -36,17 +50,18 @@
     background: var(--buttonBackgroundHover);
     box-shadow: 1px 1px 2px 1px
       color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
-      .border, .portfolioItemContent {
-        border-color: var(--buttonBorderHover);
-      }
+    .border,
+    .portfolioItemContent {
+      border-color: var(--buttonBorderHover);
+    }
   }
 
   &.active {
     background: var(--buttonBackgroundActive);
-    .border, .portfolioItemContent {
+    .border,
+    .portfolioItemContent {
       border-color: var(--buttonBorderActive);
     }
-
   }
 
   .border {
@@ -72,65 +87,46 @@
 }
 
 .itemTitle {
-  font-size: 14px;
-  color: var(--colorLightBlue);
+  font-size: var(--font-size-sm);
+  color: var(--colorBlueLight);
 }
 
 .itemTech {
-  font-size: 12px;
-  color: var(--colorYellow1);
+  font-size: var(--font-size-xs);
+  color: var(--colorYellow);
 }
-
-
 
 .contentContainer {
-    color: var(--colorRed);
-    border-radius: 2px;
+  color: var(--colorRed);
+  border-radius: 2px;
 
-    & h2 {
-        color: var(--colorLightRed);
-        text-transform: uppercase;
-    }
+  & h2 {
+    color: var(--colorRedLight);
+    text-transform: uppercase;
+  }
 
+  & p {
+    margin: var(--spacing-xl) 0;
     line-height: 125%;
-    font-size: 15px;
-}
-
-.imageContainer {
-    display: flex;
-    flex-direction: column;
-
-    & img {
-        border: 1px solid var(--uiBorderRed);
-        border-radius: 2px;
-        border-bottom-right-radius: 8px;
-        width: 100%;
-        height: 120px;
-    }
-
-    & .altText {
-        margin: var(--spacing-xs) 0 var(--spacing-md) 0;
-        font-size: 12px;
-        color: var(--colorLightRed);
-        
-    }
+    font-size: var(--font-size-md);
+  }
 }
 
 .link {
-    margin: var(--spacing-md) 0; 
-    color: var(--colorLightBlue);
-    background-color: var(--buttonSecondaryBackground);
-    border: 1px solid var(--buttonSecondaryBorder);
-    border-bottom: 2px solid var(--uiBorderBlue);
-    border-radius: 2px ;
-    border-bottom-right-radius: 6px ;
-    display: block;
-    padding: var(--spacing-md) var(--spacing-lg);
-    text-align: center;
-    cursor: pointer;
+  margin: var(--spacing-md) 0;
+  color: var(--colorBlueLight);
+  background-color: var(--buttonSecondaryBackground);
+  border: 1px solid var(--buttonSecondaryBorder);
+  border-bottom: 2px solid var(--uiBorderBlue);
+  border-radius: 2px;
+  border-bottom-right-radius: 6px;
+  display: block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: center;
+  cursor: pointer;
 
-    &:hover {
-        background-color: var(--buttonSecondaryBackgroundHover);
-        border-color: var(--buttonSecondaryBorderHover);
-    }
+  &:hover {
+    background-color: var(--buttonSecondaryBackgroundHover);
+    border-color: var(--buttonSecondaryBorderHover);
+  }
 }

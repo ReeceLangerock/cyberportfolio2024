@@ -1,0 +1,38 @@
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  box-sizing: content-box;
+
+  & img {
+    border: 1px solid var(--uiBorderRed);
+    border-radius: 2px;
+    border-bottom-right-radius: 8px;
+    object-fit: contain;
+  }
+}
+
+.altText {
+  margin: var(--spacing-xs) 0 var(--spacing-md) 0;
+  font-size: var(--font-size-sm);
+  color: var(--colorRedLight);
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  @media (max-width: 1024px) {
+    grid-area: full;
+    /* grid with 1fr 2fr on first row and 1fr on second */
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
