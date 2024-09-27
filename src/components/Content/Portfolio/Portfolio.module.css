@@ -27,6 +27,7 @@
 
   & h2 {
     color: var(--colorRedLight);
+    background: var(--backgroundDarkRed);
     border: 1px solid hsl(188.28deg 49.15% 11.57%);
     padding: var(--spacing-xs) var(--spacing-md);
     text-transform: uppercase;

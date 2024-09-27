@@ -12,8 +12,12 @@ export const CenterNav: React.FC<Props> = ({ handlePageChange }) => {
     <AnimatePresence>
       <motion.div
         key="centerNav"
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{
+          opacity: [0.9, 1],
+          scale: [0.8, 0.9, 1],
+          y: [20, 0],
+          transition: { duration: 1, type: "spring" },
+        }}
         exit={{ opacity: 0, scale: 0.5 }}
         className={styles.buttonContainer}
       >

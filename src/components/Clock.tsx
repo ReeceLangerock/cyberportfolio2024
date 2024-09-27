@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from "framer-motion";
 import styles from "./Clock.module.css";
 import { useState, useEffect } from "react";
 
@@ -23,5 +24,21 @@ export const Clock: React.FC = () => {
     return () => clearInterval(intervalId);
   }, []); // Empty dependency array ensures this runs only once
 
-  return <div className={styles.timeContainer}>{time}</div>;
+  return (
+    <AnimatePresence>
+      <motion.div
+        key={"clock"}
+        animate={{
+          opacity: [0.9, 1],
+          scale: [0.8, 0.9, 1],
+          transition: { duration: 1, type: "spring" },
+        }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        className={styles.timeContainer}
+      >
+        {time}
+      </motion.div>
+      ;
+    </AnimatePresence>
+  );
 };

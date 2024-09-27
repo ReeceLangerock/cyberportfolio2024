@@ -56,10 +56,12 @@ export default function Home() {
         <div className={styles.topFiller}>
           <AnimatePresence>
             <motion.div
+              animate={{
+                scale: [1.2, 1.2, 1],
+                opacity: [0, 1],
+                transition: { duration: 1 },
+              }}
               key="title"
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.5 }}
               className={styles.title}
             >
               <h1 className={myFont.className}>
