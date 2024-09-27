@@ -14,10 +14,8 @@ import localFont from "next/font/local";
 import { Button } from "@/components/UI/Button";
 
 // Font files can be colocated inside of `pages`
-const myFont = localFont({ src: "./CyberwayRiders.ttf" });
-
+const cyber = localFont({ src: "./CyberwayRiders.ttf" });
 const play = Play({ subsets: ["latin"], weight: "400" });
-const cyber = Play({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   const [activePage, setActivePage] = useState("HOME");
@@ -56,15 +54,13 @@ export default function Home() {
         <div className={styles.topFiller}>
           <AnimatePresence>
             <motion.div
-              animate={{
-                scale: [1.2, 1.2, 1],
-                opacity: [0, 1],
-                transition: { duration: 1 },
-              }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
               key="title"
               className={styles.title}
             >
-              <h1 className={myFont.className}>
+              <h1 className={cyber.className}>
                 Langerock
                 <span className={play.className}>{year}</span>
               </h1>
@@ -76,6 +72,7 @@ export default function Home() {
                 key="topNav"
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
                 exit={{ opacity: 0, scale: 0.5 }}
               >
                 <TopNav handlePageChange={setActivePage} />

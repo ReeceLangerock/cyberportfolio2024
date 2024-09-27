@@ -11,7 +11,6 @@ export const Contact = () => {
           scale: [0.8, 0.9, 1],
         }}
         transition={{ type: "spring" }}
-        exit={{ opacity: 0, scale: 0.75 }}
         key="contact"
         className={styles.contactContainer}
       >

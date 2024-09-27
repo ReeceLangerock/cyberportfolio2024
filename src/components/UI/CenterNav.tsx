@@ -16,7 +16,7 @@ export const CenterNav: React.FC<Props> = ({ handlePageChange }) => {
           opacity: [0.9, 1],
           scale: [0.8, 0.9, 1],
           y: [20, 0],
-          transition: { duration: 1, type: "spring" },
+          transition: { duration: 0.5, type: "spring" },
         }}
         exit={{ opacity: 0, scale: 0.5 }}
         className={styles.buttonContainer}

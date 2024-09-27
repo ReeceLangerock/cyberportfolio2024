@@ -51,7 +51,16 @@ export const About = () => {
             <div className={styles.biometric}>
               <h2>Biometric Data</h2>
 
-              <Image src={`/images/barcode.png`} alt="barcode" width={300} />
+              <Image
+                src={`/images/barcode.png`}
+                alt="barcode"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+                height={80}
+                width={200}
+              />
             </div>
             {/* 
           barcode svg */}
