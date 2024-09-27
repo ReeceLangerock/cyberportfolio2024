@@ -106,7 +106,9 @@ export default function Home() {
             <div></div>
             <span className={styles.activePage}></span>
 
-            <div></div>
+            <div
+              style={{ display: activePage === "HOME" ? "none" : "block" }}
+            ></div>
           </div>
         </div>
       </main>
