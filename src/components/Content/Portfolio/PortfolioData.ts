@@ -6,7 +6,7 @@ export const portfolioItems = [
     tech: ["Next.js", "TypeScript", "Framer Motion"],
     private: false,
     date: "September 2024",
-    repoLink: "https://github.com/ReeceLangerock/cyberportfolio",
+    repoLink: "https://github.com/ReeceLangerock/cyberportfolio2024",
     siteLink: "https://langerock.netlify.app/",
     images: ["cyber"],
     imageAltTexts: ["Recursion"],
