@@ -50,8 +50,7 @@
 
   &:hover {
     background: var(--buttonBackgroundHover);
-    box-shadow: 1px 1px 2px 1px
-      color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
+    box-shadow: 1px 1px 2px 1px color-mix(in srgb, var(--uiBorderRed) 80%, transparent);
     .border,
     .portfolioItemContent {
       border-color: var(--buttonBorderHover);
@@ -112,6 +111,11 @@
     margin: var(--spacing-xl) 0;
     line-height: 125%;
     font-size: var(--font-size-md);
+
+    & span {
+      color: var(--colorYellow);
+      font-weight: bold;
+    }
   }
 }
 

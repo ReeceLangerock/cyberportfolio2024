@@ -1,6 +1,18 @@
 export const portfolioItems = [
   {
     id: 0,
+    title: "CyberPortfolio 2024",
+    synopsis: `My current portfolio, inspired by the Cyberpunk 2077 in-game UI. Take a look around!`,
+    tech: ["Next.js", "TypeScript", "Framer Motion"],
+    private: false,
+    date: "September 2024",
+    repoLink: "https://github.com/ReeceLangerock/cyberportfolio",
+    siteLink: "https://langerock.netlify.app/",
+    images: ["cyber"],
+    imageAltTexts: ["Recursion"],
+  },
+  {
+    id: 0,
     title: "Automated Insights",
     synopsis: `Automated insights is a site that provides custom analysis and breakdowns for ESPN fantasy football leagues. This tool offers league-wide snapshots, highlighting top performers and poor roster decisions. For each matchup, it generates in-depth analysis of key roster moves, "what-if" scenarios, game notes, and visualized scoring breakdowns. With an OpenAI integration, the system also generates summaries for each matchup and the overall league week, giving users a clear and concise overview of performance. This comprehensive analysis is delivered consistently each week, helping users stay on top of their league.`,
     tech: ["Next.js", "Supabase", "TypeScript", "OpenAI API"],
@@ -11,25 +23,20 @@ export const portfolioItems = [
     images: ["AI1", "AI2"],
     imageAltTexts: ["1:1 Matchup", "League Insights"],
   },
-
   {
     id: 7,
     title: "Choice Time",
     synopsis:
-      "I built Choice Time as an experiment in Svelte, SvelteKit and thw Web Voice API. It was built to entertain my children, which was why Voice API was used as they couldn't read at the time I built it.",
+      "Choice Time was as an experiment in Svelte, SvelteKit and the Web Voice API. It was built to give Svelte a try and also entertain my children, which was why Voice API was used as they couldn't read at the time. It features a maze generator, a simple guess who clone, and a scavenger hunt.",
     tech: ["Svelte", "SvelteKit", "Web Voice API"],
     notes:
       "As this project was an experiment, it was never fully completed and is added to whenever my kids ask for new features.",
     private: false,
     date: "April 2022",
     siteLink: "https://choicetime.netlify.app/",
-    repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
+    repoLink: "https://github.com/ReeceLangerock/homeroom",
     images: ["ct_home", "ct_maze", "ct_guess"],
-    imageAltTexts: [
-      "Dashboard",
-      "Fantasy Page View",
-      "Rushing Statistics View",
-    ],
+    imageAltTexts: ["Home page", "Maze Generator", "Guess Who Clone"],
   },
   {
     id: 8,
@@ -39,8 +46,8 @@ export const portfolioItems = [
     tech: ["React", "Gatsby", "Context", "GraphQQ"],
     private: false,
     date: "March 2019",
-    siteLink: "https://langerock.netlify.app/",
-    repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
+    siteLink: "https://langerock2019.netlify.app/",
+    repoLink: "https://github.com/ReeceLangerock/portfolio2019",
     images: ["port_about", "port_portfolio", "port_settings"],
     imageAltTexts: ["About Page", "Portfolio Page", "Settings Page"],
   },
@@ -56,22 +63,18 @@ export const portfolioItems = [
     siteLink: "https://m538.herokuapp.com/revo",
     repoLink: "https://gitlab.com/JetsweepStudios/MaddenAnalytics",
     images: ["deepdive_dashboard", "deepdive_fantasy", "deepdive_rushing"],
-    imageAltTexts: [
-      "Dashboard",
-      "Fantasy Page View",
-      "Rushing Statistics View",
-    ],
+    imageAltTexts: ["Dashboard", "Fantasy Page View", "Rushing Statistics View"],
   },
   {
     id: 2,
     title: "CFMScout",
     synopsis:
-      "CFMScout is a Companion App for the Madden NFL Video Game. It is built in React-Native and is available for download on the Google Play Store. CFMScout allows users to add their league and prospect combine data, the app will then calculate estimates for speed, acceleration, agility, strength and jumping attributes, along with a SPARQ score. Users can also see how the prospects combine scores compare with prospects entered by other users",
+      "CFMScout is a Companion App for the Madden NFL Video Game. It is built in React-Native and is available for download on the Google Play Store. CFMScout allowed users to add their league and prospect combine data, the app will then calculate estimates for speed, acceleration, agility, strength and jumping attributes, along with a SPARQ score. Users can also see how the prospects combine scores compare with prospects entered by other users",
     tech: ["React Native", "Redux", "MongoDB"],
     private: true,
     date: "August 2018",
-    siteLink:
-      "https://play.google.com/store/apps/details?id=com.cfmscout&hl=en_US",
+    notes: "The Play store entry lapsed and I did not resubmit as it's very out of data and I no longer play madden",
+    siteLink: "https://play.google.com/store/apps/details?id=com.cfmscout&hl=en_US",
     images: ["main", "add", "prospect"],
     imageAltTexts: ["Landing View", "Add Prospect View", "Prospect View"],
   },
@@ -97,11 +100,7 @@ export const portfolioItems = [
     siteLink: "http://dungeoneer.surge.sh/",
     repoLink: "https://github.com/ReeceLangerock/dungeoneer",
     images: ["dungeoneer", "dungeoneer_hidden", "dungeoneer_visible"],
-    imageAltTexts: [
-      "Responsive Landing View",
-      "Fog of War View",
-      "Dungon Overview",
-    ],
+    imageAltTexts: ["Responsive Landing View", "Fog of War View", "Dungon Overview"],
   },
   {
     id: 5,
@@ -128,10 +127,6 @@ export const portfolioItems = [
     siteLink: "http://mansion-men.surge.sh/",
     repoLink: "https://github.com/ReeceLangerock/MMFantasyLeague",
     images: ["mm", "mm_stats", "mm_h2h"],
-    imageAltTexts: [
-      "Responsive Landing View",
-      "User Stats Page",
-      "Head To Head View",
-    ],
+    imageAltTexts: ["Responsive Landing View", "User Stats Page", "Head To Head View"],
   },
 ];

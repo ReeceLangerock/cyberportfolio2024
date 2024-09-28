@@ -26,17 +26,13 @@ export const Portfolio: React.FC = () => {
                   whileHover={{ scale: 1.025, x: -5 }}
                   whileTap={{ scale: 0.975 }}
                   key={index}
-                  className={`${styles.portfolioItem} ${
-                    index === activeItem ? styles.active : ""
-                  }`}
+                  className={`${styles.portfolioItem} ${index === activeItem ? styles.active : ""}`}
                   onClick={() => setActiveItem(index)}
                 >
                   <div className={styles.border}></div>
                   <div className={styles.portfolioItemContent}>
                     <div className={styles.itemTitle}>{item.title}</div>
-                    <div className={styles.itemTech}>
-                      {item.tech.join(", ")}
-                    </div>
+                    <div className={styles.itemTech}>{item.tech.join(", ")}</div>
                   </div>
                 </motion.li>
               ))}
@@ -51,28 +47,26 @@ export const Portfolio: React.FC = () => {
           className={styles.contentContainer}
         >
           <h2>{portfolioItems[activeItem].title}</h2>
-          <a
-            href={portfolioItems[activeItem].siteLink}
-            target="_blank"
-            className={styles.link}
-          >
+          <a href={portfolioItems[activeItem].siteLink} target="_blank" className={styles.link}>
             View Project
           </a>
           {!portfolioItems[activeItem].private && (
-            <a
-              href={portfolioItems[activeItem].repoLink}
-              target="_blank"
-              className={styles.link}
-            >
+            <a href={portfolioItems[activeItem].repoLink} target="_blank" className={styles.link}>
               View Code
             </a>
           )}
           <p>{portfolioItems[activeItem].synopsis}</p>
           {portfolioItems[activeItem].notes && (
-            <p>NOTE: {portfolioItems[activeItem]?.notes}</p>
+            <p>
+              <span>NOTE:</span> {portfolioItems[activeItem]?.notes}
+            </p>
           )}
-          <p>Built With: {portfolioItems[activeItem].tech.join(", ")}</p>
-          <p>Coded in: {portfolioItems[activeItem].date}</p>
+          <p>
+            <span>Built With:</span> {portfolioItems[activeItem].tech.join(", ")}
+          </p>
+          <p>
+            <span>Coded in:</span> {portfolioItems[activeItem].date}
+          </p>
         </motion.div>
       </AnimatePresence>
       <PortfolioImages
