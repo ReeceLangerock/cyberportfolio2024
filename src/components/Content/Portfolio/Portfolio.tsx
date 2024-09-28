@@ -43,7 +43,7 @@ export const Portfolio: React.FC = () => {
       <AnimatePresence>
         <motion.div
           animate={{ opacity: [0, 0.5, 1], scale: [0.8, 1] }}
-          transition={{ delay: 0.4, type: "tween" }}
+          transition={{ delay: 0.2, type: "tween" }}
           className={styles.contentContainer}
         >
           <h2>{portfolioItems[activeItem].title}</h2>

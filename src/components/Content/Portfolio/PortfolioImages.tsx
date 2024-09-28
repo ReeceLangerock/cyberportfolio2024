@@ -13,9 +13,7 @@ export const PortfolioImages: React.FC<Props> = ({ images, imageAltTexts }) => (
       <AnimatePresence>
         <motion.div
           key="portfolioImages"
-          initial={{ opacity: 0, scale: 0.75 }}
-          animate={{ opacity: [0, 0.33, 1], scale: 1 }}
-          exit={{ opacity: 0, scale: 0.75 }}
+          animate={{ opacity: [0, 0.5, 1], scale: [0.8, 1] }}
           transition={{ delay: 0.4 }}
           className={styles.imageContainer}
         >
@@ -28,6 +26,7 @@ export const PortfolioImages: React.FC<Props> = ({ images, imageAltTexts }) => (
                   x: -50,
                   zIndex: 10,
                 }}
+                animate={{ opacity: [0, 0.5, 1], scale: [0.8, 1] }}
                 key={image}
                 className={styles.imageWrapper}
               >

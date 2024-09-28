@@ -13,6 +13,7 @@ export const About = () => {
         <motion.div
           key="about"
           animate={{
+            y: [100, 0],
             scale: [0.8, 0.9, 1],
           }}
           transition={{ type: "spring" }}
@@ -29,21 +30,16 @@ export const About = () => {
 
             <h3>Software Engineer</h3>
             <p>
-              Hello, I&apos;m Reece. I&apos;m a Senior Software Engineer working
-              remotely from the Chicago suburbs. With a passion for continuous
-              learning, I thrive on tackling new challenges and exploring
-              emerging technologies. Over the years, I&apos;ve gained a wealth
-              of experience across full-stack development, from building
-              scalable systems to crafting responsive, user-friendly interfaces.
-              Whether I&apos;m integrating AI-driven features, developing
-              greenfield solutions, or mentoring teams, I&apos;m driven by the
-              excitement of solving complex problems and making a meaningful
-              impact.
+              Hello, I&apos;m Reece. I&apos;m a Senior Software Engineer working remotely from the Chicago suburbs. With
+              a passion for continuous learning, I thrive on tackling new challenges and exploring emerging
+              technologies. Over the years, I&apos;ve gained a wealth of experience across full-stack development, from
+              building scalable systems to crafting responsive, user-friendly interfaces. Whether I&apos;m integrating
+              AI-driven features, developing greenfield solutions, or mentoring teams, I&apos;m driven by the excitement
+              of solving complex problems and making a meaningful impact.
             </p>
             <p>
-              Feel free to check out my portfolio and the skills I&apos;ve been
-              honing, but rest assured, my list of things to explore never stops
-              growing!
+              Feel free to check out my portfolio and the skills I&apos;ve been honing, but rest assured, my list of
+              things to explore never stops growing!
             </p>
 
             <hr />
@@ -71,10 +67,11 @@ export const About = () => {
       <AnimatePresence>
         <motion.div
           key="aboutTech"
-          initial={{ opacity: 0, scale: 0.75 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.75 }}
-          transition={{ delay: 0.15 }}
+          animate={{
+            y: [100, 0],
+            scale: [0.8, 0.9, 1],
+          }}
+          transition={{ type: "spring" }}
           className={styles.infoContainer}
         >
           <div className={styles.techStack}>
