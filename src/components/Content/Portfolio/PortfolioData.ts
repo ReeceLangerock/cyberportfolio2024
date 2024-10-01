@@ -19,7 +19,7 @@ export const portfolioItems = [
     private: true,
     notes: "This project is in active development",
     date: "August 2024",
-    siteLink: "https://automatedinsights.netlify.app/league/1/2024/3",
+    siteLink: "https://automatedinsights.netlify.app/league/2/2024/2",
     images: ["AI1", "AI2"],
     imageAltTexts: ["1:1 Matchup", "League Insights"],
   },
